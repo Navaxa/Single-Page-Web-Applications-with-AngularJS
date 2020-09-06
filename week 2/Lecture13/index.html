@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-App="MsgApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller="MsgController">
+      <h5>{{name}} has a message:</h5>
+      Original MSG: {{sayMessage()}} <br>
+      Change MSG: {{changeWords()}} <br>
+      Truth: {{changeWords() | truth : 'Miguel' : 'Angel'}} <br>
+      BIG TRUTH: {{changeWords() | truth : 'Miguel' : 'Angel' | uppercase}}
+      <div>
+        <br />
+        <button ng-click="feedBuild()">Test</button>
+        <br /><br />
+        <img ng-src="img/logo_{{stateOfBeing}}.png " alt="" />
+      </div>
+    </div>
+  </body>
+</html>
